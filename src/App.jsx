@@ -10,7 +10,7 @@ export default function App() {
       <h1>Proper Plants</h1>
 
       {PLANTS.map((plant) => (
-        <PlantCard key={plant.id} plant={plant}  ></PlantCard>
+        <PlantCard key={plant.id} plant={plant} cartItems={cartItems} setCartItems={setCartItems} ></PlantCard>
       ))}
 
       <Cart />
