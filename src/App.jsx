@@ -13,7 +13,7 @@ export default function App() {
         <PlantCard key={plant.id} plant={plant} cartItems={cartItems} setCartItems={setCartItems} ></PlantCard>
       ))}
 
-      <Cart cartItems={cartItems} setCartItems={setCartItems} />
+      <Cart cartItems={cartItems} />
     </>
   );
 }
