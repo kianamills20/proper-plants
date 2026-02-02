@@ -3,14 +3,14 @@ export default function PlantCard(props){
     function addToCart(){
         const copyCartItems = [...props.cartItems];
         const existingItem = copyCartItems.find((i) => {
-            i.name === props.plant.name 
+          return  i.name === props.plant.name;
         });
         if(existingItem){
-            existingItem.quanity += 1;
+            existingItem.quantity += 1;
         }else{
             copyCartItems.push({name: props.plant.name, image: props.plant.image, quantity: 1,})
         };
-        copyCartItems.push(props.plant.name);
+        copyCartItems.push({id: props.plant.id, name: props.plant.name, image: props.plant.image, quantity: 1,});
          console.log("New cart contents:", copyCartItems);
         props.setCartItems(copyCartItems);
     }
