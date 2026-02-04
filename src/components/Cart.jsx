@@ -1,4 +1,4 @@
-export default function Cart({cartItems}){
+export default function Cart({cartItems, plantIncrease}){
 //    function cartIncrease(id){
 //         const copyCartItems = [...props.cartItems];
 //         for(let i = 0; i < copyCartItems.length; i++){
@@ -10,7 +10,6 @@ export default function Cart({cartItems}){
 //             }
 //         }
 //         props.setCartItems(copyCartItems);
-//     }
     return(
         <>   
          <h2>Cart</h2>
@@ -18,6 +17,8 @@ export default function Cart({cartItems}){
             return(  <div key={i.id}>
             <span>{i.image}</span> 
             <span>{i.name}</span>
+            <button onClick={() => plantIncrease(i.id)}>+</button>
+            <button>-</button>
             <span>{i.quantity}</span>
             </div>);
          }

@@ -17,7 +17,7 @@ export default function PlantCard(props){
 return <>
 <h3>{props.plant.image}</h3>
 <h4>{props.plant.name}</h4>
-<button onClick={ addToCart }>Add to Cart</button>
+<button  onClick={() => addToCart(props.plant)}>Add to Cart</button>
 <h2>Plants</h2>
 </>
 }
