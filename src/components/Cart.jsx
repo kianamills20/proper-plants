@@ -1,28 +1,18 @@
-export default function Cart({cartItems, plantIncrease}){
-//    function cartIncrease(id){
-//         const copyCartItems = [...props.cartItems];
-//         for(let i = 0; i < copyCartItems.length; i++){
-//             if(copyCartItems[i].id === id){
-//                 copyCartItems[i] = {
-//                     ...copyCartItems[i], 
-//                     quantity: copyCartItems[i].quantity + 1, 
-//                 }
-//             }
-//         }
-//         props.setCartItems(copyCartItems);
-    return(
-        <>   
-         <h2>Cart</h2>
-         {cartItems.map((i) => {
-            return(  <div key={i.id}>
-            <span>{i.image}</span> 
+export default function Cart({ cartItems, plantIncrease, plantDecrease }) {
+  return (
+    <>
+      <h2>Cart</h2>
+      {cartItems.map((i) => {
+        return (
+          <div key={i.id}>
+            <span>{i.image}</span>
             <span>{i.name}</span>
             <button onClick={() => plantIncrease(i.id)}>+</button>
-            <button>-</button>
+            <button onClick={() => plantDecrease(i.id)}>-</button>
             <span>{i.quantity}</span>
-            </div>);
-         }
-        )}
-         </>
-    );
+          </div>
+        );
+      })}
+    </>
+  );
 }
