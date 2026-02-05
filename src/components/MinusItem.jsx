@@ -13,8 +13,8 @@ export function cartDecrease(cart, id) {
           quantity: newQuantity,
         };
       }
+      break;
     }
-    break;
   }
   return newCart;
 }

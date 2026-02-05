@@ -1,3 +1,4 @@
+
 export default function PlantCard(props) {
   function addToCart() {
     const copyCartItems = [...props.cartItems];
@@ -20,10 +21,11 @@ export default function PlantCard(props) {
 
   return (
     <>
-      <h3>{props.plant.image}</h3>
-      <h4>{props.plant.name}</h4>
-      <button onClick={() => addToCart(props.plant)}>Add to Cart</button>
-      <h2>Plants</h2>
+<div className="plant-card">
+      <h3 className="plant-img">{props.plant.image}</h3>
+      <h4 className="plant-name">{props.plant.name}</h4>
+      <button className="addtocart" onClick={() => addToCart(props.plant)}>Add to Cart</button>
+    </div>
     </>
   );
 }

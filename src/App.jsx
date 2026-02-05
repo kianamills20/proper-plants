@@ -17,13 +17,19 @@ export default function App() {
 
   return (
     <>
+    <div>
       <h1>Proper Plants</h1>
-
+</div>
+<div className="body">
+<div className="plant-cards">
       {PLANTS.map((plant) => (
         <PlantCard key={plant.id} plant={plant} cartItems={cartItems} setCartItems={setCartItems} ></PlantCard>
       ))}
-
+</div>
+<div className="cart">
       <Cart cartItems={cartItems} plantIncrease={plantIncrease} plantDecrease={plantDecrease} />
+    </div>
+    </div>
     </>
   );
 }

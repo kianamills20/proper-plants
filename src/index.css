@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header{
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+}
+.plant-card{
+    width: 250px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: white;
+    font-family: sans-serif;
+    margin: 10px;
+    padding: 10px;
+}
+.plant-img{
+width: 100%;
+object-fit: cover;
+text-align: center;
+font-size: 50px;
+}
+.plant-name{
+    font-size: 20px;
+}
+button.addtocart{
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 50%;
+}
+
+.cart-card{
+    display: flex;
+    flex-direction: row;
+     gap: 3px;
+    padding: 3px;
+    align-items: center;
+     width: 250px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: white;
+    font-family: sans-serif;
+    margin: 10px;
+    padding: 10px;
+}
+.body{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+}
+.plant-cards{
+    flex: 3;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.cart{
+    flex: 1;
+    position: sticky;
+    top: 20px;
+    height: auto;
+    overflow-y: auto;
+    border-left: 1px solid #eee;
+    padding-left: 20px;
+    margin: 10px;
+}
+.cart-items{
+    flex: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.btns{
+    display: flex;
+    gap: 5px;
+    margin: 5px;
+    padding: 5px;
+}
+
